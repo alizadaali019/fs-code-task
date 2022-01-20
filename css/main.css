@@ -1,0 +1,315 @@
+body {
+  margin: 0;
+  bottom: 0;
+  background-color: #f2f4f9;
+}
+
+#organisationChart {
+  width: 100%;
+}
+
+#organisationChart .organisationChart {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#organisationChart .organisationChart ul {
+  padding-top: 20px;
+  position: relative;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#organisationChart .organisationChart ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #ccc;
+  width: 0;
+  height: 20px;
+}
+
+#organisationChart .organisationChart ul li {
+  display: inline-table;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 10px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  margin: 0 30px;
+}
+
+#organisationChart .organisationChart ul li .addCategoryBtn {
+  width: 26px;
+  height: 26px;
+  border-radius: 100%;
+  background-color: green;
+  border: none;
+  background-image: url("../img/plus.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+#organisationChart .organisationChart ul li .content {
+  display: -ms-inline-grid;
+  display: inline-grid;
+  border-radius: 5px;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  border-radius: 5px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  position: relative;
+}
+
+#organisationChart .organisationChart ul li .content .buttonWrapper {
+  position: absolute;
+  left: 100%;
+  top: 4px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: 8px;
+}
+
+#organisationChart .organisationChart ul li .content .buttonWrapper .addBtn {
+  border: none;
+  background-color: transparent;
+  background: green;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+  position: relative;
+}
+
+#organisationChart .organisationChart ul li .content .buttonWrapper .addBtn .first {
+  width: 10px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#organisationChart .organisationChart ul li .content .buttonWrapper .addBtn .last {
+  width: 10px;
+  height: 2px;
+  background: white;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin-left: -1px;
+}
+
+#organisationChart .organisationChart ul li .content .buttonWrapper .removeBtn {
+  border: none;
+  background-color: transparent;
+  background: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#organisationChart .organisationChart ul li .content .buttonWrapper .removeBtn .first {
+  width: 10px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#organisationChart .organisationChart ul li .content .buttonWrapper .removeBtn .last {
+  width: 10px;
+  height: 2px;
+  background: white;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin-left: -1px;
+}
+
+#organisationChart .organisationChart ul li .content .addInput {
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+  background: #314252;
+  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#organisationChart .organisationChart ul li .content .addInput input {
+  outline: none;
+  padding: 8px 10px;
+  border: none;
+}
+
+#organisationChart .organisationChart ul li .content .addInput::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #314252;
+  left: 50%;
+  top: -4px;
+  position: absolute;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+}
+
+#organisationChart .organisationChart ul li .content .addInput .addCategory, #organisationChart .organisationChart ul li .content .addInput .exitCategory {
+  width: 26px;
+  height: 26px;
+  border-radius: 100%;
+  border: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+#organisationChart .organisationChart ul li .content .addInput .addCategory {
+  background-color: green;
+}
+
+#organisationChart .organisationChart ul li .content .addInput .exitCategory {
+  background-color: red;
+}
+
+#organisationChart .organisationChart ul li .content span {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #666;
+  padding: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+#organisationChart .organisationChart ul li .content .addCategoryBtn {
+  width: 26px;
+  height: 26px;
+  border-radius: 100%;
+  background-color: green;
+  border: none;
+  background-image: url("../img/plus.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  position: absolute;
+  right: -35px;
+  top: 2px;
+  cursor: pointer;
+}
+
+#organisationChart .organisationChart ul li::before, #organisationChart .organisationChart ul li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid #ccc;
+  width: 90%;
+  height: 10px;
+}
+
+#organisationChart .organisationChart ul li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #ccc;
+}
+
+#organisationChart .organisationChart ul li:only-child::after, #organisationChart .organisationChart ul li :only-child::before {
+  display: none;
+}
+
+#organisationChart .organisationChart ul li:only-child {
+  padding-top: 0;
+}
+
+#organisationChart .organisationChart ul li:first-child::before, #organisationChart .organisationChart ul li :last-child::after {
+  border: 0 none;
+}
+
+#organisationChart .organisationChart ul li:last-child::before {
+  border-right: 1px solid #ccc;
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+}
+
+#organisationChart .organisationChart ul li:first-child::after {
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+
+#organisationChart .organisationChart ul li:first-child::before {
+  border: none;
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  background-color: #00000033;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+}
+
+.modal .modalContent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+}
+
+.modal .modalContent .modalButtonsContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px;
+}
+
+.modal .modalContent .modalButtonsContent button {
+  padding: 8px 10px;
+  outline: none;
+  background-color: gray;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */
